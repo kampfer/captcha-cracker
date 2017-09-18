@@ -13,8 +13,8 @@ def downloadCtripCaptcha():
     fw = open(fn, 'wb')
     fw.write(imgData)
     fw.close()
-    return fn
+    return fn, imgData
 
-for i in range(100):
-    print(i, downloadCtripCaptcha())
-    time.sleep(1)
+# for i in range(100):
+#     print(i, downloadCtripCaptcha())
+#     time.sleep(1)
