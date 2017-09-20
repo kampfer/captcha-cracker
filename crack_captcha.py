@@ -17,9 +17,9 @@ imgData = list(img.getdata())
 for x in range(0, w):
     for y in range(0, h):
         if imgData[w * y + x] < 25:
-            img.putpixel((x,y), 0)  # 黑色
+            img.putpixel((x, y), 0)  # 黑色
         else:
-            img.putpixel((x,y), 255)    # 白色
+            img.putpixel((x, y), 255)    # 白色
 
 # 采用洪水填充法去噪
 # http://blog.csdn.net/jia20003/article/details/8908464
