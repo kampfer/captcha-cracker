@@ -39,7 +39,7 @@ def floodFilter(data, origin, filterMap):
     bottomRight = (origin[0] + 1, origin[1] + 1)
     bottom = (origin[0], origin[1] + 1)
     bottomLeft = (origin[0] - 1, origin[1] + 1)
-    left = (origin[1] - 1, origin[1])
+    left = (origin[0] - 1, origin[1])
 
     for p in [topLeft, top, topRight, right, bottomRight, bottom, bottomLeft, left]:
         if (p not in filterMap) and (getPointValue(data, p) == 0):
@@ -55,8 +55,9 @@ for y in xrange(1, h):
             mid_pixel = imgData[w * y + x] #中央像素点像素值
             if mid_pixel == 0:
                 pp = floodFilter(imgData, (x, y), ps)
-                print len(pp), pp
-                for p in pp:
-                    img.putpixel(p, 200)
+                print '>>>>', len(pp), pp
+                if len(pp) < 10:
+                    for p in pp:
+                        img.putpixel(p, 255)
 
 img.show()
