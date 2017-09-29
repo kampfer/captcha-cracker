@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from PIL import Image
-import math
 import numpy as np
 
 # 打开图片
