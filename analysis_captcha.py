@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from PIL import Image
 import numpy as np
-# import cv2
+import cv2
+
+print cv2.__version__
 
 def binaryImage(img, threshold):
     w, h = img.size
